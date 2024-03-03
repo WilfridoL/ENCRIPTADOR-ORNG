@@ -42,21 +42,21 @@ btnCopy.addEventListener('click', async () => {
 
 // activar funciones
 btnEncriptar.addEventListener('click', () =>{
-  display.style.display = 'flex';
   display.textContent = encryptText(inputText.value);
   if(inputText.value === ''){
     waitingText.style.display = 'block';
   }else{
+    display.style.display = 'flex';
     waitingText.style.display = 'none';
     btnCopy.style.display = 'block';
   }
 });
 btnDesencriptar.addEventListener('click', () =>{ 
-  display.style.display = 'flex';
   display.textContent = decryptText(inputText.value)
   if(inputText.value === ''){
     waitingText.style.display = 'block';
   }else{
+    display.style.display = 'flex';
     waitingText.style.display = 'none';
     btnCopy.style.display = 'block';
   }
