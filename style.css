@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+  --background: #F3F5FC;
+  --white: #FFFFFF;
+  --gray-400: #495057;
+  --gray-500: #343A40;
+  --litle-blue: #D8DFE8;
+  --dark-blue-300: #0A3871;
+  --dark-blue-400: #072B61;
+  --letter-size-32: 32px;
+  --letter-size-24: 24px;
+  --letter-size-16: 16px;
+  --border-radius-32: 32px;
+  --border-radius-24: 24px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background: var(--background);
+  font-family: 'Roboto', sans-serif;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.title{
+  margin: 30px 10px 0px 80px ;
+  width: 40px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title img{
+  width: 100%;
+}
+.text-input{
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* margin-top: 8%; */
+  padding: 0px 8%;
+}
+.text-input .text textarea{
+  width: 50vw;
+  height: 65vh;
+  font-size: var(--letter-size-32);
+  color: var(--dark-blue-300);
+  resize: none;
+  background: none;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+}
+.text-input .text textarea:focus,
+.text-input .text textarea::placeholder{
+  outline: none;
+  color: var(--dark-blue-300);
+  
+}
+button{
+  width: 100%;
+  height: 67px;
+  padding: 24px;
+  font-size: var(--letter-size-16);
+  transition: all .3s ease-in;
+  cursor: pointer;
+}
+button:hover{
+  opacity: 80%;
+}
+.text-input .btn-content{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+}
+.text-input .btn-content .btn{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+
+}
+.text-input .btn-content .btn button{
+  margin: 0px 8px 0px 8px;
+  border-radius: var(--border-radius-24);
+  border: 1px solid var(--dark-blue-300);
+}
+.text-input .btn-content .btn button:nth-child(1){
+  background: var(--dark-blue-400);
+  color: var(--white);
+}
+.text-input .btn-content .btn button:nth-child(2){
+  background: var(--litle-blue);
+  color: var(--dark-blue-300);
+}
+
+.text-exit{
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 25%;
+  height: 90vh;
+  gap: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 24px;
+  background: var(--white);
+  border-radius: var(--border-radius-32);
+}
+
+.text-exit #display{
+  display: none;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-start;
+  overflow-x: hidden;
+  text-align: left;
+  font-size: var(--letter-size-32);
+  color: var(--gray-500);
+}
+
+.text-exit .waiting-for-text h2{
+  font-size: var(--letter-size-32);
+  color: var(--gray-500);
+  margin-bottom: 24px;
+}
+.text-exit .waiting-for-text p {
+  font-size: var(--letter-size-16);
+  color: var(--gray-400);
+}
+
+.text-exit button{
+  display: none;
+  font-size: var(--letter-size-16);
+  border-radius: var(--border-radius-24);
+  background: none;
+  border: 1px solid var(--dark-blue-400);
+  color: var(--dark-blue-400);
+  margin-bottom: 0%;
+}
+
+.text-exit button:hover{
+  opacity: 100%;
+  background: var(--dark-blue-300);
+  color: var(--white);
+}
+
+@media (min-width: 1281px) and (max-width: 1440px) {
+  .title{
+    width: 35px;
+    height: 50px;
+  }
+  .text-exit{
+    width: 22%;
+    padding: 24px;
+  }
+  .text-exit .waiting-for-text .imgLoad img{
+    width: 250px;
+  }
+  .text-exit .waiting-for-text h2{
+    font-size: var(--border-radius-24);
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .text-exit{
+    width: 20%;
+  }
+  .text-exit .waiting-for-text .imgLoad img{
+    width: 250px;
+  }
+}
+@media (max-width: 1024px) {
+  .container{
+    flex-direction: column;
+    padding: 24px;
+  }
+  .title{
+    margin: 24px 0px;
+    width: 35px;
+    height: 50px;
+  }
+  .text-input{
+    width: 100vw;
+    align-items: flex-start;
+    padding: 0;
+  }
+  .text-input .text{
+    width: 100%;
+  }
+  .text-input .text textarea{
+    width: 100%;
+    height: 40vh;
+    margin-top: 10%;
+  }
+  .text-exit{
+    width: 100%;
+    height: auto;
+    margin-top: 8%;
+  }
+  .text-exit h2{
+    font-size: var(--letter-size-16);
+  }
+  .text-exit .waiting-for-text .imgLoad{
+    display: none;
+  }
+  @media (max-width: 768px) {
+    .text-input .btn-content .btn{
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+}
